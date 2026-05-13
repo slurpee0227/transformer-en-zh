@@ -1,0 +1,50 @@
+I love artificial intelligence.
+How are you?
+Good morning.
+Good night.
+Thank you.
+You are welcome.
+I am a student.
+He is a teacher.
+She likes reading books.
+We are learning deep learning.
+This is a machine translation project.
+The weather is very good today.
+I want to drink water.
+Please open the door.
+Please close the window.
+Where is the train station?
+I need your help.
+Can you speak Chinese?
+I can speak English.
+This computer is fast.
+The model is training now.
+The loss is decreasing.
+The translation result is good.
+I like machine learning.
+Transformers use attention mechanisms.
+Attention can connect all tokens.
+The encoder reads the source sentence.
+The decoder generates the target sentence.
+The model cannot see future tokens.
+We use a causal mask in the decoder.
+Padding tokens should be ignored.
+The vocabulary is built from training data.
+This project does not use pretrained models.
+We train the model from scratch.
+The output file is saved as a pt file.
+Please run the training script first.
+Then run the inference script.
+Input an English sentence.
+The system will output Chinese.
+I work in a factory.
+The engineer checks the machine.
+The server stores production data.
+The program processes csv files.
+Python is useful for automation.
+The operator records machine parameters.
+We need to improve production efficiency.
+The robot moves the product.
+The camera reads the barcode.
+The system sends a notification.
+The database stores the result.
