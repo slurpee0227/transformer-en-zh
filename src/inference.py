@@ -4,10 +4,12 @@ import torch
 from config import Config
 from tokenizer import tokenize_en
 from TransformerNN import AttentionIsAllYouNeedTransformer
+from beam_search import beam_search_decode
 
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--sentence', type=str, default=None)
+parser.add_argument('--beam_search', action='store_true')
 args = parser.parse_args()
 
 
@@ -74,7 +76,17 @@ src_ids = encode_sentence(sentence)
 
 src_tensor = torch.tensor([src_ids]).to(device)
 
-output_ids = greedy_decode(src_tensor)
+if args.beam_search:
+    output_ids = beam_search_decode(
+        model,
+        src_tensor,
+        Config.BOS_IDX,
+        Config.EOS_IDX,
+        device,
+        beam_width=5
+    )
+else:
+    output_ids = greedy_decode(src_tensor)
 
 output_tokens = []
 
@@ -86,4 +98,5 @@ for idx in output_ids:
 
     output_tokens.append(token)
 
-print('Output Chinese:', ' '.join(output_tokens))
+print('Input English:', sentence)
+print('Output Chinese:', ''.join(output_tokens))
