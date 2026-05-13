@@ -11,11 +11,10 @@ class Config:
 
     MAX_LENGTH = 50
 
-    # A small-but-stable Transformer setting for Colab GPU.
+    # Stable Transformer training settings.
     BATCH_SIZE = 64
     EPOCHS = 30
-    LEARNING_RATE = 1.0
-    WARMUP_STEPS = 400
+    LEARNING_RATE = 3e-4
     LABEL_SMOOTHING = 0.1
     EARLY_STOPPING_PATIENCE = 6
 
